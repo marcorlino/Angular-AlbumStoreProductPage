@@ -7,16 +7,17 @@ import { ProductService } from '../product.service';
   templateUrl: './product-tracklisting.component.html',
   styleUrls: ['./product-tracklisting.component.css']
 })
-export class ProductTracklistingComponent implements OnInit
-{
+export class ProductTracklistingComponent implements OnInit {
 
-albumInfo:<Album>
+albumInfo:Album;
 
 
 constructor(private _productService: ProductService) {}
 
 ngOnInit(): void {
 
-  this._productService.getAlbum(1).subscribe((response => this.albumInfo = response));
+  this._productService.getAlbum(1).subscribe(response => this.albumInfo = response);
+
+}
 
 }
