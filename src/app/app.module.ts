@@ -4,6 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+   { path: 'products', component: ProductListComponent },
+   { path: 'products/:id', component: ProductPageComponent },
+  { path: '', redirectTo: 'products', pathMatch: 'full' }
+  { path: 'path', component: NameComponent },
+]
 
 import { AppComponent } from './app.component';
 import { ProductPageComponent } from './product-page/product-page.component';
@@ -24,12 +30,12 @@ import { ProductListComponent } from './product-list/product-list.component';
     BrowserModule,
     FormsModule,
     HttpClientModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     ProductService
   ],
   bootstrap: [AppComponent],
 
-  appRoutes: Routes[]
 })
 export class AppModule { }
