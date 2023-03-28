@@ -10,7 +10,7 @@ import { Product } from './product';
 })
 export class ProductService {
 
-  _productsUrl = '../assets/products.json';
+  private _productsUrl = '../assets/products.json';
 
   private _albumUrl = '../assets/album.json';
 
