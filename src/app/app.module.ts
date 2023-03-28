@@ -8,7 +8,6 @@ const appRoutes: Routes = [
    { path: 'products', component: ProductListComponent },
    { path: 'products/:id', component: ProductPageComponent },
   { path: '', redirectTo: 'products', pathMatch: 'full' }
-  { path: 'path', component: NameComponent },
 ]
 
 import { AppComponent } from './app.component';
